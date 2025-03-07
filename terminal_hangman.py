@@ -31,7 +31,7 @@ def get_user_in(word_length):
 
     return user_in
 
-def main():
+def run_game():
     selected_word = get_random_word().lower() # Get random 5 letter word
     
     # Initialise game criterias
@@ -77,4 +77,4 @@ def main():
     else:
         print(f"OH NO! The word was {selected_word}. Try again next time.")
             
-main()
+run_game()
