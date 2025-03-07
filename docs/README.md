@@ -29,6 +29,8 @@ A simple command-line Hangman game written in Python. You can play the game eith
 3. Run the game: `shiny run app.py`
 
 ## Usage
-- Start the game by running `shiny app.py`.
+- Start the web app by running `shiny run app.py`.
+- Choose your game mode: Long or Short (this determines your max number of guesses)
+- Click on the `Start Game` button.
 - Guess the word, and any matching letters will fill in the word.
-- Your max number of attempts is based on the selected game mode.
+- You can also allow additional hints, which will show you all the mismatched letters that you used in your previous guesses.
