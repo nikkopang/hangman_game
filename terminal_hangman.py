@@ -1,12 +1,5 @@
-import random
-import pandas as pd
 from hangman_states import get_hangman_states
-
-def get_random_word(word_length=5):
-    df = pd.read_csv("10000_Words.csv")
-    df = df[df['words'].str.len() == word_length]
-    word = random.choice(df.words.to_list())
-    return word
+from utils import get_random_word, check_letters_found_in_word
 
 def set_game_mode():
     user_in = ""
@@ -17,11 +10,6 @@ def set_game_mode():
     print(f"Game mode set to '{user_in}'.")
     return user_in
 
-def check_letters_found_in_word(word1, word2):
-    letters = set(word1) # Get only the unique letters found in word1
-    matched_letters = [letter for letter in letters if letter in word2]
-    return matched_letters
-
 def get_user_in(word_length):
     user_in = input("Guess a word: ").lower().strip()
 
@@ -31,7 +19,7 @@ def get_user_in(word_length):
 
     return user_in
 
-def run_game():
+def run_terminal_game():
     selected_word = get_random_word().lower() # Get random 5 letter word
     
     # Initialise game criterias
@@ -76,5 +64,3 @@ def run_game():
         print(f"CONGRATULATIONS! You guessed the correct word: {selected_word}")
     else:
         print(f"OH NO! The word was {selected_word}. Try again next time.")
-            
-run_game()
