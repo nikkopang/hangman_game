@@ -23,11 +23,10 @@
 ## Description
 A simple command-line Hangman game written in Python. You can play the game either on your terminal or on your browser via Shiny!
 
-## Demo
-
 ## Installation
 1. Clone the repository: `git clone https://github.com/nikkopang/hangman_game.git`
-2. Run the game: `python app.py`
+2. Install the open source shiny package: `pip install shiny`
+3. Run the game: `shiny run app.py`
 
 ## Usage
 - Start the game by running `shiny app.py`.
