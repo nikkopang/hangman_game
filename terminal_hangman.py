@@ -1,5 +1,5 @@
-from hangman_states import get_hangman_states
-from utils import get_random_word, check_letters_found_in_word
+from shiny_hangman.hangman_states import get_hangman_states
+from shiny_hangman.utils import get_random_word, check_letters_found_in_word
 
 def set_game_mode():
     user_in = ""
@@ -64,3 +64,5 @@ def run_terminal_game():
         print(f"CONGRATULATIONS! You guessed the correct word: {selected_word}")
     else:
         print(f"OH NO! The word was {selected_word}. Try again next time.")
+
+run_terminal_game()
